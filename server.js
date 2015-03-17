@@ -41,7 +41,7 @@ can.addListener("onMessage", function(msg) {
 			desc: desc
 		};
 		sendmsg(packet);
-		console.log("   Rep," + mode + "," + PID + "," + data.toString('hex') + "," + desc);
+		// console.log("   Rep," + mode + "," + PID + "," + data.toString('hex') + "," + desc);
 	}
 });
 
@@ -59,7 +59,7 @@ function reqPID(req) {
 	buf.writeUInt8(req.PID, 2);
 
 	function doreq() {
-		console.log("Req," + req.mode + ',' + req.PID + ',' + lookupObdiiDesc(req.mode, req.PID));
+		// console.log("Req," + req.mode + ',' + req.PID + ',' + lookupObdiiDesc(req.mode, req.PID));
 		can.send({
 			id: 0x7DF,
 			data: buf
@@ -80,7 +80,6 @@ function sendmsg(packet) {
 	//socket.send(buf, offset, length, port, address[, callback])#
 	server.send(buf, 0, buf.length, 41234, clientaddr, function(err) {
 		if (err) {
-			console.log(err);
 			console.error(err);
 			server.close();
 			process.exit();

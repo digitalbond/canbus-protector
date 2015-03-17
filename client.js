@@ -68,13 +68,13 @@ can.addListener("onMessage", function(msg) {
 		var PID = buf.readUInt8(2);
 		// var data = buf.slice(3);
 		var desc = lookupObdiiDesc(mode, PID);
-		console.log("Request for", desc);
+		// console.log("Request for", desc);
 		var repmode = mode + 0x40;
 		if (canstate[repmode] !== undefined && canstate[repmode][PID] !== undefined) {
-			console.log("  Replying with:", canstate[repmode][PID].data.toString('hex'));
+			// console.log("  Replying with:", canstate[repmode][PID].data.toString('hex'));
 			sendReply(canstate[repmode][PID]);
 		} else {
-			console.log("  Unable to reply. Unknown");
+			// console.log("  Unable to reply. Unknown");
 		}
 	}
 });
