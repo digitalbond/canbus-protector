@@ -1,0 +1,25 @@
+{
+	"server": {
+		"host": "10.10.10.1",
+		"port": 41234,
+		"caninterface": "vcan0",
+		"monitor": [{
+			"mode": 1,
+			"PID": "0C"
+		},{
+			"mode": 1,
+			"PID": "0D"
+		},{
+			"mode": 1,
+			"PID": "11"
+		},{
+			"mode": 1,
+			"PID": "1F"
+		}]
+	},
+	"client": {
+		"host": "10.10.10.2",
+		"port": 41234,
+		"caninterface": "vcan0"
+	}
+}
