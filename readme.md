@@ -27,6 +27,3 @@ You can edit the config.json file to add more supported OBDII PIDs, or edit the 
 ##Vehicle CAN Bitrate
 
 By default this system assumes a CAN bitrate of 500000 (most common). Your vehicle may be different. To change this, edit the .conf files in the linux-configs directory and set the bitrate to the appropriate value.
-
-##Logging
-Logging is on by default. To disable, edit the .conf files in linux-config to redirect output to /dev/null.
